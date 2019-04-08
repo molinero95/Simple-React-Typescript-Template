@@ -86,7 +86,7 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../../AppData/Roaming/npm/node_modules/webpack/buildin/global.js":
+/***/ "../../../AppData/Roaming/npm/node_modules/webpack/buildin/global.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
   \***********************************/
@@ -563,7 +563,7 @@ module.exports = function() {
   return global[key] = (global[key] || 0) + 1;
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../AppData/Roaming/npm/node_modules/webpack/buildin/global.js */ "../../AppData/Roaming/npm/node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../AppData/Roaming/npm/node_modules/webpack/buildin/global.js */ "../../../AppData/Roaming/npm/node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -4487,7 +4487,8 @@ class Home extends React.Component {
         this.setState({});
     }
     render() {
-        return (React.createElement("div", null, "Soy el home"));
+        return (React.createElement("div", null,
+            React.createElement("h3", null, "Home")));
     }
 }
 exports.Home = Home;
@@ -4539,7 +4540,7 @@ class Login extends React.Component {
     }
     render() {
         return (React.createElement("div", null,
-            React.createElement("h1", null, "LOGIN")));
+            React.createElement("h3", null, "Login")));
     }
 }
 exports.Login = Login;
@@ -4558,32 +4559,15 @@ exports.Login = Login;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 const React = __webpack_require__(/*! react */ "react");
+const react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 class NavMenu extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
         return (React.createElement("nav", { className: "navbar navbar-expand-lg navbar-light bg-light" },
-            React.createElement("a", { className: "navbar-brand", href: "#" }, "Navbar"),
-            React.createElement("button", { className: "navbar-toggler", type: "button", "data-toggle": "collapse", "data-target": "#navbarSupportedContent", "aria-controls": "navbarSupportedContent", "aria-expanded": "false", "aria-label": "Toggle navigation" },
-                React.createElement("span", { className: "navbar-toggler-icon" })),
-            React.createElement("div", { className: "collapse navbar-collapse", id: "navbarSupportedContent" },
-                React.createElement("ul", { className: "navbar-nav mr-auto" },
-                    React.createElement("li", { className: "nav-item active" },
-                        React.createElement("a", { className: "nav-link", href: "#" },
-                            "Home ",
-                            React.createElement("span", { className: "sr-only" }, "(current)"))),
-                    React.createElement("li", { className: "nav-item" },
-                        React.createElement("a", { className: "nav-link", href: "#" }, "Link")),
-                    React.createElement("li", { className: "nav-item dropdown" },
-                        React.createElement("a", { className: "nav-link dropdown-toggle", href: "#", id: "navbarDropdown", role: "button", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false" }, "Dropdown"),
-                        React.createElement("div", { className: "dropdown-menu", "aria-labelledby": "navbarDropdown" },
-                            React.createElement("a", { className: "dropdown-item", href: "#" }, "Action"),
-                            React.createElement("a", { className: "dropdown-item", href: "#" }, "Another action"),
-                            React.createElement("div", { className: "dropdown-divider" }),
-                            React.createElement("a", { className: "dropdown-item", href: "#" }, "Something else here"))),
-                    React.createElement("li", { className: "nav-item" },
-                        React.createElement("a", { className: "nav-link disabled", href: "#" }, "Disabled"))))));
+            React.createElement(react_router_dom_1.NavLink, { to: "/home", exact: true, activeClassName: 'active', className: "nav-link nav-item", href: "#" }, "Home "),
+            React.createElement(react_router_dom_1.NavLink, { to: "/login", exact: true, activeClassName: 'active', className: "nav-link nav-item", href: "#" }, "Login ")));
     }
 }
 exports.NavMenu = NavMenu;

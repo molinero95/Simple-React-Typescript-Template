@@ -16,7 +16,7 @@ export class Login extends React.Component<ILoginProps, ILoginState>{
     public render(){
         return (
             <div>
-                <h1>LOGIN</h1>
+                <h3>Login</h3>
             </div>
         )
     }

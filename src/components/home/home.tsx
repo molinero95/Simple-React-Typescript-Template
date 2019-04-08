@@ -18,7 +18,7 @@ export class Home extends React.Component<IHomeProps, IHomeState>{
     public render(){
         return (
             <div>
-                Soy el home
+                <h3>Home</h3>
             </div>
         )
     }
